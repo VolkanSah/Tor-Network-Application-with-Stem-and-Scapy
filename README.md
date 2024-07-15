@@ -1,3 +1,4 @@
+
 # Tor Network Application with Stem and Scapy (TNASS)
 ###### update 25.05.2024 & now public 4 all
 
@@ -12,6 +13,8 @@ This project demonstrates how to use the Stem library to interact with the Tor n
   - [Connecting to a Running Tor Process](#connecting-to-a-running-tor-process)
   - [Starting a New Tor Process](#starting-a-new-tor-process)
   - [Sending Packets through Tor with Scapy](#sending-packets-through-tor-with-scapy)
+  - [Single Domain Security Check](#single-domain-security-check)
+  - [Multiple Domains Security Check from File](#multiple-domains-security-check-from-file)
 - [Credits](#credits)
 - [License](#license)
 
@@ -65,7 +68,6 @@ with Controller.from_port(port = 9051) as controller:
 To start a new Tor process directly from your Python script:
 
 ```python
-
 from stem.process import launch_tor_with_config
 
 tor_process = launch_tor_with_config(
@@ -81,12 +83,12 @@ print("Tor process started")
 # Terminate the Tor process
 tor_process.terminate()
 ``` 
+
 ### Sending Packets through Tor with Scapy
 
 To send network packets through the Tor network using Scapy:
 
 ```python
-
 from scapy.all import *
 import socks
 import socket
@@ -105,12 +107,47 @@ else:
     print("No response received")
 ```
 
-## Credits
-- [VolkanSah on Github](https://github.com/volkansah)
-- [Developer Site](https://volkansah.github.io)
-- [Become a 'Sponsor'](https://github.com/sponsors/volkansah)
-- [Source of this resposerity](https://github.com/VolkanSah/Tor-Network-Application-with-Stem-and-Scapy)
+### Single Domain Security Check
+
+The `single.py` script starts a Tor process, requests a new Tor identity, and performs security checks on a specified Onion domain using various tools. The script runs the following steps:
+
+1. **Start Tor Process:** Initializes a Tor process with a specified configuration for `SocksPort` and `ControlPort`.
+2. **Authenticate with Tor Controller:** Connects to the Tor control port and authenticates.
+3. **Request New Identity:** Requests a new Tor identity using the `NEWNYM` signal.
+4. **Perform Security Checks:** Executes security tools (`nmap`, `nikto`, `socat`) on the specified Onion domain and prints the results.
+5. **Terminate Tor Process:** Ends the Tor process after completing the checks.
+
+### Multiple Domains Security Check from File
+
+The `from_file.py` script extends the functionality of `single.py` by reading multiple Onion domains from a text or CSV file and performing security checks on each. The script follows these steps:
+
+1. **Start Tor Process:** Initializes a Tor process with a specified configuration for `SocksPort` and `ControlPort`.
+2. **Authenticate with Tor Controller:** Connects to the Tor control port and authenticates.
+3. **Read Domains from File:** Reads a list of Onion domains from a text or CSV file.
+4. **Iterate Over Domains:**
+   - Requests a new Tor identity for each domain.
+   - Executes security tools (`nmap`, `nikto`, `socat`) on each Onion domain and prints the results.
+5. **Terminate Tor Process:** Ends the Tor process after processing all domains.
+
+## Possible Automation with These Scripts
+
+These scripts can be used to automate security testing of Onion domains. They demonstrate how to:
+- Integrate Tor with security tools.
+- Automate the process of changing Tor identities.
+- Perform repeated security checks on multiple domains.
+
+Additional tools and tasks that could be automated with similar scripts include:
+- Vulnerability scanning with other tools like OpenVAS.
+- Web application security testing with OWASP ZAP.
+- Network traffic analysis with Wireshark.
+- Automated penetration testing with Metasploit.
+
+By leveraging these scripts, various security testing and network analysis tasks can be performed automatically within the Tor network.
+
+### Credits
+
+- [Source of this repository](https://github.com/VolkanSah/Tor-Network-Application-with-Stem-and-Scapy)
 
 ### License
 
-This project is licensed under the MIT License. 
+This project is licensed under the MIT License.

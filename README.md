@@ -144,10 +144,22 @@ Additional tools and tasks that could be automated with similar scripts include:
 
 By leveraging these scripts, various security testing and network analysis tasks can be performed automatically within the Tor network.
 
-### Credits
+## Your Support
+If you find this project useful and want to support it, there are several ways to do so:
 
+- If you find the white paper helpful, please ⭐ it on GitHub. This helps make the project more visible and reach more people.
+- Become a Follower: If you're interested in updates and future improvements, please follow my GitHub account. This way you'll always stay up-to-date.
+- Learn more about my work: I invite you to check out all of my work on GitHub and visit my developer site https://volkansah.github.io. Here you will find detailed information about me and my projects.
+- Share the project: If you know someone who could benefit from this project, please share it. The more people who can use it, the better.
+**If you appreciate my work and would like to support it, please visit my [GitHub Sponsor page](https://github.com/sponsors/volkansah). Any type of support is warmly welcomed and helps me to further improve and expand my work.**
+
+Thank you for your support! ❤️
+
+### Credits
+S. Volkan Kücükbudak
 - [Source of this repository](https://github.com/VolkanSah/Tor-Network-Application-with-Stem-and-Scapy)
 
 ### License
 
 This project is licensed under the MIT License.
+

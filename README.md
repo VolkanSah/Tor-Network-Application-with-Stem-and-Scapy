@@ -1,8 +1,7 @@
 # Tor Network Application with Stem and Scapy (TNASS)
 ###### update 07/2024
 ![TNA-SS](tnass.jpg)
-
-This project demonstrates how to use the Stem library to interact with the Tor network and the Scapy library for network packet manipulation. The goal is to create an application that can leverage Tor for anonymized network analysis, including scanning both Onion and regular websites.
+Security comes at a high price in life. Freedom, security, and democracy are not guaranteed. Small tools always bring advantages to the user that can be used to automate processes. These creative scripts aim to show you how simple functions can save a lot of time and money, eliminating the need to purchase expensive security packages for basic scanning tasks.
 
 ## Table of Contents
 

@@ -1,0 +1,3 @@
+exampleonion1.onion
+exampleonion2.onion
+exampleonion3.onion

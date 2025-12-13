@@ -1,6 +1,5 @@
 # Tor Network Application with Stem and Scapy (TNASS)
 ###### update 07/2024
-![TNA-SS](tnass.jpg)
 Security comes at a high price in life. Freedom, security, and democracy are not guaranteed. Small tools always bring advantages to the user that can be used to automate processes. These creative scripts aim to show you how simple functions can save a lot of time and money, eliminating the need to purchase expensive security packages for basic scanning tasks.
 
 ## Table of Contents
